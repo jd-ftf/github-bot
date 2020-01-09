@@ -2,7 +2,7 @@ const netlifySecret = require('../lib/netlify-secret')
 
 module.exports = (app) => {
 
-    app.emitEvent = (data) => {
+    function emitEvent (data) {
 
         const [owner, repo] = /\S+\/(\S+)\/(\S+)\/pull/.exec(data['review_url']).slice(1, 3)
 
@@ -32,7 +32,7 @@ module.exports = (app) => {
 
         data.context = data.context ? `${event}.${data.context}` : event
 
-        app.emitEvent(data)
+        emitEvent(data)
 
     })
 }

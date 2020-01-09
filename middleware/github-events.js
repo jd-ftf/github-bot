@@ -2,7 +2,7 @@ const githubSecret = require('../lib/github-secret')
 
 module.exports = (app) => {
 
-    app.emitEvent = (data) => {
+    function emitEvent(data) {
         const owner = data.repository.owner.login || data.organization.login
         const repo = data.repository.name
         app.emit(data.action, data, owner, repo, data.sender.login)
@@ -26,7 +26,7 @@ module.exports = (app) => {
         const data = req.body.hasOwnProperty('payload') ? JSON.parse(req.body.payload) : req.body
 
         data.action = data.action ? event + '.' + data.action : event
-        app.emitEvent(data)
+        emitEvent(data)
     })
 
 }
