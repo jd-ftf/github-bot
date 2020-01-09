@@ -1,17 +1,17 @@
 const githubClient = require('../lib/github-client')
 
 const labelMap = {
-    build: { color: '#eb6420', description: '' },
-    deploy: { color: '', description: '' },
-    examples: { color: '', description: '' },
-    packages: { color: '', description: '' },
-    docs: { color: '#006b75', description: '' },
-    style: { color: '', description: '' },
-    mixins: { color: '', description: '' },
-    locale: { color: '', description: '' },
-    unit: { color: '#9944dd', description: '' },
-    test: { color: '#990099', description: '' },
-    default: { color: '#1eca26', description: '' },
+    build: { color: "#ff3333", description: "" },
+    deploy: { color: "#ff9900", description: "" },
+    examples: { color: "#ff7356", description: "" },
+    packages: { color: "#FF9999", description: "" },
+    docs: { color: "#66CCFF", description: "" },
+    style: { color: "#a987ff", description: "" },
+    mixins: { color: "#FFCC00", description: "" },
+    locale: { color: "#CCCCCC", description: "" },
+    unit: { color: "#30dfb3", description: "" },
+    test: { color: "#00cc66", description: "" },
+    default: { color: "#3399ff", description: "" }
 }
 
 function resolveLabel (label) {
