@@ -74,11 +74,15 @@ module.exports = function (app) {
 
         const files = await listAllFiles(owner, repo, pull_number)
 
+        const labels = resolveLabels(files)
+
+        if (labels.length === 0) return
+
         await githubClient.issues.addLabels({
             owner,
             repo,
             issue_number: pull_number,
-            labels: resolveLabels(files)
+            labels
         })
     })
 }
