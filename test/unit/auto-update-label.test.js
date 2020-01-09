@@ -1,9 +1,9 @@
-require('dotenv').load({ silent: true, path: '../../.env' })
+require('dotenv').config({ silent: true, path: '../../.env' })
 const proxyquire = require('proxyquire')
 const supertest = require('supertest')
 const readFixture = require('../read-fixture')
 const app = proxyquire('../../app', {
-    '../lib/github-secret': {
+    './lib/github-secret': {
         isValid: () => true,
         // 启用全局覆盖
         '@global': true

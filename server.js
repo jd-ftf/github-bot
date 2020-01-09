@@ -1,4 +1,4 @@
-require('dotenv').load({ silent: true })
+require('dotenv').config({ silent: true })
 
 const app = require('./app')
 
