@@ -17,6 +17,8 @@ const labelsMap = new Map([
     [/^build/, ['build']],
     [/^build\/deploy/, ['build', 'deploy']],
     [/^packages\/(\w+)\//, ['packages', '$1']],
+    [/^\.travis\.yml$/, ['deploy','travis']],
+
 ])
 
 /**
