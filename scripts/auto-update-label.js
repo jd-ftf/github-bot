@@ -4,7 +4,7 @@ const labelMap = {
     build: { color: "#ff3333", description: "" },
     deploy: { color: "#ff9900", description: "" },
     examples: { color: "#ff7356", description: "" },
-    packages: { color: "#FF9999", description: "" },
+    package: { color: "#FF9999", description: "" },
     docs: { color: "#66CCFF", description: "" },
     style: { color: "#a987ff", description: "" },
     mixins: { color: "#FFCC00", description: "" },

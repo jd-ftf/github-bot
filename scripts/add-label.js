@@ -16,8 +16,9 @@ const labelsMap = new Map([
     // Common
     [/^build/, ['build']],
     [/^build\/deploy/, ['build', 'deploy']],
-    [/^packages\/(\w+)\//, ['packages', '$1']],
+    [/^packages\/(\w+)\//, ['$1']],
     [/^\.travis\.yml$/, ['deploy','travis']],
+    [/^package\.json$/, ['package']],
 
 ])
 
