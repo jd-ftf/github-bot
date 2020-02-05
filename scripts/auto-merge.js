@@ -17,20 +17,27 @@ module.exports = function (app) {
     if (merged || !mergeable || mergeable_state !== 'clean') {
       return
     }
-
-    // 合并
-    await githubClient.pulls.merge({
-      owner,
-      repo,
-      pull_number
-    })
-
-    // 合并后机器人在对话框留言
-    githubClient.issues.createComment({
-      owner,
-      repo,
-      issue_number: pull_number,
-      body: 'auto merge ~!'
-    })
+    try {
+      // 合并
+      await githubClient.pulls.merge({
+        owner,
+        repo,
+        pull_number,
+        merge_method: 'rebase'
+      })
+      githubClient.issues.createComment({
+        owner,
+        repo,
+        issue_number: pull_number,
+        body: 'auto rebased ~!'
+      })
+    } catch (e) {
+      githubClient.issues.createComment({
+        owner,
+        repo,
+        issue_number: pull_number,
+        body: 'auto rebased fail ~!'
+      })
+    }
   })
 }
