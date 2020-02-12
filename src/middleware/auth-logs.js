@@ -9,7 +9,7 @@
 const express = require('express')
 const auth = require('basic-auth')
 
-const pkg = require('../package')
+const pkg = require('../../package')
 
 const logsDir = process.env.LOGS_DIR || ''
 const [username, password] = (process.env.LOGIN_CREDENTIALS || '').split(':')

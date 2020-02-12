@@ -1,14 +1,7 @@
-require('dotenv').config({ silent: true, path: '../../.env' })
-const proxyquire = require('proxyquire')
 const supertest = require('supertest')
 const readFixture = require('../read-fixture')
-const app = proxyquire('../../app', {
-  './lib/github-secret': {
-    isValid: () => true,
-    // 启用全局覆盖
-    '@global': true
-  }
-})
+
+const app = require('../app')
 
 const webhookPayload = readFixture('pull_request.opened.json')
 
