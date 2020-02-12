@@ -19,15 +19,15 @@ module.exports = function (app) {
     return
   }
   app.use('/logs', (req, res, next) => {
-      const user = auth(req)
+    const user = auth(req)
 
-      if (user === undefined || user['name'] !== username || user['pass'] !== password) {
-        res.statusCode = 401
-        res.setHeader('WWW-Authenticate', `Basic realm="${pkg.name}"`)
-        res.end('Unauthorized')
-      } else {
-        next()
-      }
+    if (user === undefined || user.name !== username || user.pass !== password) {
+      res.statusCode = 401
+      res.setHeader('WWW-Authenticate', `Basic realm="${pkg.name}"`)
+      res.end('Unauthorized')
+    } else {
+      next()
     }
-    , express.static(logsDir))
+  }
+  , express.static(logsDir))
 }

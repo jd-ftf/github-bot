@@ -2,7 +2,6 @@ const githubClient = require('../lib/github-client')
 
 module.exports = function (app) {
   app.on('pull_request_review.submitted', async (data, owner, repo) => {
-
     const { number: pull_number } = data.pull_request
 
     // 获取PR信息

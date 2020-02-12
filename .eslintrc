@@ -1,0 +1,33 @@
+{
+  "root": true,
+  "env": {
+    "node": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "script",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "standard"
+  ],
+  "rules": {
+    // 缩进两个空格
+    "indent": [
+      "error",
+      2
+    ],
+    // "禁止直接使用 Object.prototypes 的内置属性"
+    "no-prototype-builtins": [
+      "off"
+    ],
+    // "要求使用骆驼拼写法"
+    "camelcase": "off"
+  }
+}

@@ -13,16 +13,16 @@ app.use(bodyParser.urlencoded({ extended: true, verify: captureRaw }))
 
 // 加载Events handle
 fs.readdirSync(path.resolve(__dirname, 'scripts'))
-    .filter(file => /\S*.js/.test(file))
-    .forEach((file) => {
-        require(`./scripts/${file}`)(app)
-    })
+  .filter(file => /\S*.js/.test(file))
+  .forEach((file) => {
+    require(`./scripts/${file}`)(app)
+  })
 
 // 加载Events middleware
 fs.readdirSync(path.resolve(__dirname, 'middleware'))
-    .filter(file => /\S*.js/.test(file))
-    .forEach((file) => {
-        require(`./middleware/${file}`)(app)
-    })
+  .filter(file => /\S*.js/.test(file))
+  .forEach((file) => {
+    require(`./middleware/${file}`)(app)
+  })
 
 module.exports = app
