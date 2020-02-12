@@ -2,56 +2,33 @@
 
 京东FTF团队使用此机器人帮助成员管理其开源项目
 
-It executes [scripts](https://github.com/nodejs/github-bot/tree/master/scripts) in response to events that are
-pushed to it via GitHub webhooks. All [repositories](https://github.com/nodejs) that use this bot have the same webhook url & secret configured (there is only 1 bot instance). Org-wide webhooks are not allowed.
+它执行 [scripts](https://github.com/jd-ftf/github-bot/tree/master/src/scripts) 以响应通过 GitHub webhooks 推送过来的事件。
+使用这个机器人的所有 [repositories](https://github.com/jd-ftf) 都有相同的 webhook 链接和密钥配置(只有一个机器人实例)。
 
-## Contributing
+### 环境变量
 
-Please do, contributions are more than welcome!
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-### Environment Variables
 > 首先在项目根目录创建 `.env` 文件
 
 - **`GITHUB_TOKEN`**<br>
-  The [GitHub API token](https://github.com/blog/1509-personal-api-tokens) for your account (or bot account) that will be used to make API calls to GitHub. The account must have proper access to perform the actions required by your script.
+  你的账号(或者虚拟机器人的账号)的 [GitHub API token](https://github.com/blog/1509-personal-api-tokens)，此令牌用于调用 GitHub API。此账号必须具有适当的访问权限才能执行脚本所需的操作。
 - **`GITHUB_WEBHOOK_SECRET`**<br>
-  The webhook secret that GitHub signs the POSTed payloads with. This is created when the webhook is defined. The default is `hush-hush`.
+  GitHub 使用 webhook 密钥对请求 payloads 进行加密。此密钥是在配置 webhook 时输入的，默认值为：`hush-hush`。
+- **`NetLify_WEBHOOK_SECRET`**<br>
+  [NetLify](https://www.netlify.com) 使用 webhook 密钥对请求 payloads 进行加密。此密钥是在配置 webhook 时输入的，默认值为：`hush-hush`。
 
-### Developing Locally
+### 本地开发
 
-The bot will try to load a `.env` file at the root of the project if it exists to set environment varaibles. You will need to create one similar to this:
+机器人会尝试载入项目根目录下的 `.env` 文件，此文件用于配置nodejs运行时的环境变量。如果有需要，请按照下列内容的格式进行创建此文件。
 
 ```
 GITHUB_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-SSE_RELAY=https://hook-relay.herokuapp.com
 ```
 
-**Note the additional `SSE_RELAY` variable:**
-When developing locally, it is difficult to setup a GitHub webhook
-pointing to the computer you are developing on. An easy workaround is to set the `SSE_RELAY` to the url of
-[a SSE relay server](https://github.com/williamkapke/hook-relay) that will send the GitHub events via
-[Server Sent Events](http://www.html5rocks.com/en/tutorials/eventsource/basics/) instead.
+使用测试用例时，不需要配置 `WEBHOOK_SECRET`。
 
-You can use the [TestOrgPleaseIgnore](https://github.com/TestOrgPleaseIgnore) GitHub Organization, to test
-your changes. Actions performed on the repos there will be sent to
-[the SSE Relay](https://github.com/williamkapke/hook-relay).
+**运行此机器人:**
 
-The `GITHUB_WEBHOOK_SECRET` environment variable is not required when using the relay.
-
-**Run the bot:**
 ```bash
+$ npm i
 $ npm start
 ```
-
-When developing a script, it is likely that you will only want to run the script(s) that you are working on. You may
-pass an additional [glob](https://www.npmjs.com/package/glob) argument to specify which scripts to run.
-
-```bash
-$ SCRIPTS=./scripts/my-new-event-handler.js npm start
-```
-
-
-## License
-
-[MIT](LICENSE.md)
