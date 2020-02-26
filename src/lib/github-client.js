@@ -1,5 +1,5 @@
 const { retry } = require('@octokit/plugin-retry')
-const Octokit = require('@octokit/rest').plugin(retry)
+const Octokit = require('@octokit/rest').Octokit.plugin(retry)
 
 const githubClient = new Octokit({
   auth: process.env.GITHUB_TOKEN || 'invalid-placeholder-token',
