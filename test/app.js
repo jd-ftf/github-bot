@@ -7,5 +7,10 @@ module.exports = proxyquire('../src/app', {
     isValid: () => true,
     // 启用全局覆盖
     '@global': true
+  },
+  './lib/netlify-secret': {
+    isValid: () => true,
+    // 启用全局覆盖
+    '@global': true
   }
 })
