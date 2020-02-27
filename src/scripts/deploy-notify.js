@@ -1,13 +1,4 @@
-const githubClient = require('../lib/github-client')
-
-function createComment (owner, repo, pull_number, message) {
-  githubClient.issues.createComment({
-    owner,
-    repo,
-    issue_number: pull_number,
-    body: message
-  })
-}
+const { createComment } = require('../common/github')
 
 module.exports = function (app) {
   app.on('deploy_created.deploy-preview', async (data, {
