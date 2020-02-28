@@ -7,7 +7,7 @@ async function resolveEvent (data, owner, repo) {
    * @description 判断检查套件是否完成
    * @param {Number} pull_number PR 序号
    */
-  const { number: pull_number } = data.pull_request
+  const { number: pull_number } = data.pull_request || data.check_suite.pull_requests[0]
   const { data: pullRequest } = await githubClient.pulls.get({
     owner,
     repo,
