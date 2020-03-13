@@ -2,6 +2,8 @@ const githubClient = require('../lib/github-client')
 
 const { createComment, merge } = require('../common/github')
 
+const { listAllCommit } = require('./check-commit')
+
 async function resolveEvent (data, owner, repo) {
   /**
    * @description 判断检查套件是否完成
@@ -40,8 +42,17 @@ async function resolveEvent (data, owner, repo) {
     return (commit_id === sha && state === 'APPROVED' && author_association === 'MEMBER')
   })
   if (!approved) return
-  /** merge PR **/
-  const [error] = await merge(owner, repo, pull_number, 'rebase')
+  // 提取commit message
+  const [message] = (await listAllCommit(owner, repo, pull_number)).split('\n')
+  // merge PR
+  const [error] = await merge({
+    owner,
+    repo,
+    pull_number,
+    merge_method: 'squash',
+    commit_title: message,
+    commit_message: ''
+  })
   if (error) return
   createComment(owner, repo, pull_number, 'auto rebased ~!')
 }

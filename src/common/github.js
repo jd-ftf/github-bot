@@ -30,14 +30,8 @@ exports.createComment = async (owner, repo, issue_number, body) => parse(githubC
 
 /**
  * @description 合并PR
- * @param {string} owner
- * @param {string} repo
- * @param {number} pull_number
- * @param {string} merge_method
  */
-exports.merge = async (owner, repo, pull_number, merge_method = 'merge') => parse(githubClient.pulls.merge({
-  owner,
-  repo,
-  pull_number,
-  merge_method
-}))
+exports.merge = async (option) => {
+  option.merge_method = option.merge_method ? option.merge_method : 'merge'
+  return parse(githubClient.pulls.merge(option))
+}

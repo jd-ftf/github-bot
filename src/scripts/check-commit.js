@@ -1,23 +1,17 @@
 const githubClient = require('../lib/github-client')
 const { createComment } = require('../common/github')
 
-/** 需要被忽略的merge history **/
-const ignoreMsg = [
-  /^Merge branch (\S+) into (\S+)$/,
-  /^Merge remote-tracking branch (\S+) into (\S+)$/,
-  /^Merge pull request #(\d+) from (\S+)$/
-]
 /** commit message 格式 **/
 const commitRE = /^.{1,20}(\(.+\))?: .{1,50}/
 /** message映射表 **/
 const message = {
-  exceed: '\nafter deal with it you can reopen the PR or create a new PR.',
+  exceed: 'Please use rebase to squash the number of your commit to only one except merge history.\n',
   format: '   ERROR invalid commit message format.\n\n' +
     '  Proper commit message format is required for automated changelog generation. Examples:\n\n' +
     '    feat(compiler): add \'comments\' option\n' +
     '    fix(v-model): handle events on blur (close #28)\n\n' +
     '  See [.github/CONTRIBUTING.md](https://github.com/jd-ftf/wot-design-mini/blob/dev/.github/CONTRIBUTING.md) for more details.\n',
-  suggest: '\nafter deal with it you can reopen the PR or create a new PR.'
+  suggest: 'After dealing with it you can reopen the PR or create a new PR.'
 }
 
 /**
@@ -51,8 +45,6 @@ async function listAllCommit (owner, repo, pull_number) {
  * @return {String} 格式不正确时的错误原因
  */
 function checkMsgs (msgs) {
-  msgs = msgs.filter(msg => !ignoreMsg.some(re => re.test(msg)))
-  // 剔除 merge history 后commit数量仍然超过一个
   if (msgs.length !== 1) {
     return message.exceed
   }
@@ -74,7 +66,7 @@ async function resolveEvent (data, owner, repo) {
     pull_number,
     state: 'closed'
   })
-  createComment(owner, repo, pull_number, `@${user}\n${errorReason}${message.suggest}`)
+  createComment(owner, repo, pull_number, `@${user}\n\n${errorReason}${message.suggest}`)
 }
 
 module.exports = function (app) {
@@ -85,3 +77,4 @@ module.exports = function (app) {
   // 重开时
   app.on('pull_request.reopened', resolveEvent)
 }
+module.exports.listAllCommit = listAllCommit
