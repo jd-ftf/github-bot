@@ -43,7 +43,7 @@ async function resolveEvent (data, owner, repo) {
   })
   if (!approved) return
   // 提取commit message
-  const [message] = (await listAllCommit(owner, repo, pull_number)).split('\n')
+  const [message] = (await listAllCommit(owner, repo, pull_number))[0].split('\n')
   // merge PR
   const [error] = await merge({
     owner,
