@@ -1,6 +1,12 @@
 const githubClient = require('../lib/github-client')
 const { createComment } = require('../common/github')
 
+/** 需要被忽略的merge history **/
+const ignoreMsg = [
+  /^Merge branch (\S+) into .+/,
+  /^Merge remote-tracking branch (\S+) into .+/,
+  /^Merge pull request #(\d+) from .+/
+]
 /** commit message 格式 **/
 const commitRE = /^.{1,20}(\(.+\))?: .{1,50}/
 /** message映射表 **/
@@ -45,6 +51,7 @@ async function listAllCommit (owner, repo, pull_number) {
  * @return {String} 格式不正确时的错误原因
  */
 function checkMsgs (msgs) {
+  msgs = msgs.filter(msg => !ignoreMsg.some(re => re.test(msg)))
   if (msgs.length !== 1) {
     return message.exceed
   }
