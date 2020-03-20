@@ -12,9 +12,9 @@
 - **`GITHUB_TOKEN`**<br>
   你的账号(或者虚拟机器人的账号)的 [GitHub API token](https://github.com/blog/1509-personal-api-tokens)，此令牌用于调用 GitHub API。此账号必须具有适当的访问权限才能执行脚本所需的操作。
 - **`GITHUB_WEBHOOK_SECRET`**<br>
-  GitHub 使用 webhook 密钥对请求 payloads 进行加密。此密钥是在配置 webhook 时输入的，默认值为：`hush-hush`。
+  GitHub 使用 webhook 密钥对请求 payloads 进行加密。此密钥是在配置 webhook 时输入的，默认值为：`hush-hush`，用来校验 github event payload 的有效性。
 - **`NetLify_WEBHOOK_SECRET`**<br>
-  [NetLify](https://www.netlify.com) 使用 webhook 密钥对请求 payloads 进行加密。此密钥是在配置 webhook 时输入的，默认值为：`hush-hush`。
+  [NetLify](https://www.netlify.com) 使用 webhook 密钥对请求 payloads 进行加密。此密钥是在配置 webhook 时输入的，默认值为：`hush-hush`，用来校验 netlify event payload 的有效性。
 
 ### 本地开发
 
@@ -22,6 +22,11 @@
 
 ```
 GITHUB_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+那么在NodeJS中的进程变量中则有:
+
+```javascript
+process.env.GITHUB_TOKEN= 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 ```
 
 使用测试用例时，不需要配置 `WEBHOOK_SECRET`。
