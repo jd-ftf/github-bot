@@ -3,8 +3,7 @@
   "version": "0.1.0-Alpha",
   "description": "FTF GitHub Bot",
   "scripts": {
-    "start": "node src/server.js",
-    "fix": "cross-env EFF_ABSOLUTE_PATHS=true eslint --fix ./ --format friendly"
+    "start": "node src/server.js"
   },
   "engines": {
     "node": ">= 11.0.0"
