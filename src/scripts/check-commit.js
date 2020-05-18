@@ -62,7 +62,12 @@ function checkMsgs (msgs) {
 }
 
 async function resolveEvent (data, owner, repo) {
-  const { number: pull_number, user: { login: user } } = data.pull_request
+  const { number: pull_number, user: { login: user }, base } = data.pull_request
+  // 合并到的目标分支是默认分支才检测 commit
+  if (base.ref !== base.repo.default_branch) {
+    return
+  }
+
   const commitMsgs = await listAllCommit(owner, repo, pull_number)
   const errorReason = checkMsgs(commitMsgs)
   // 当出现错误时，关闭PR并@作者给出错误原因和决绝方案
