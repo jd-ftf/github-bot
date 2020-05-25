@@ -62,4 +62,6 @@ module.exports = function (app) {
   app.on('pull_request_review.submitted', resolveEvent)
   // 检查套件检查完之后立即尝试合并
   app.on('check_suite.completed', resolveEvent)
+  // 每个 check action完成之后都尝试合并
+  app.on('check_run.completed', resolveEvent)
 }
