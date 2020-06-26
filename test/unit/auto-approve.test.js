@@ -2,7 +2,7 @@ const supertest = require('supertest')
 const readFixture = require('../read-fixture')
 const app = require('../app')
 
-const webhookPayload = readFixture('pull_request.review_requested.json')
+const webhookPayload = readFixture('pull_request.assigned.json')
 
 supertest(app)
   .post('/hooks/github')
