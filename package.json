@@ -20,7 +20,7 @@
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.0.1",
     "@commitlint/config-conventional": "^9.0.1",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
