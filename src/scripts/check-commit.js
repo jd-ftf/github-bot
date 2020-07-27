@@ -11,7 +11,7 @@ const ignoreMsg = [
 const commitRE = /^.{1,20}(\(.+\))?: .{1,50}/
 /** message映射表 **/
 const message = {
-  exceed: 'Please use rebase to squash the number of your commit to only one except merge history.\n',
+  exceed: 'Please use rebase to squash the commits which have same message.\n',
   format: '   ERROR invalid commit message format.\n\n' +
     '  Proper commit message format is required for automated changelog generation. Examples:\n\n' +
     '    feat(compiler): add \'comments\' option\n' +
@@ -48,17 +48,21 @@ async function listAllCommit (owner, repo, pull_number) {
 /**
  * @description 检查 commit message是否遵循规范
  * @param {Array<String>} msgs
- * @return {String} 格式不正确时的错误原因
+ * @throws {String} 格式不正确时的错误原因
  */
 function checkMsgs (msgs) {
   msgs = msgs.filter(msg => !ignoreMsg.some(re => re.test(msg)))
-  if (msgs.length !== 1) {
-    return message.exceed
-  }
-  const [commit] = msgs
-  if (commitRE.test(commit)) return ''
-  // commit message格式无法通过校验
-  return message.format
+  msgs.reduce((prev, current) => {
+    // 有两个相邻的 commit message 内容完全相同
+    if (prev.trim() === current.trim()) {
+      throw Error(message.exceed)
+    }
+    // 有不符合格式的 commit message
+    if (!commitRE.test(current)) {
+      throw Error(message.format)
+    }
+    return current
+  }, '')
 }
 
 async function resolveEvent (data, owner, repo) {
@@ -69,16 +73,19 @@ async function resolveEvent (data, owner, repo) {
   }
 
   const commitMsgs = await listAllCommit(owner, repo, pull_number)
-  const errorReason = checkMsgs(commitMsgs)
-  // 当出现错误时，关闭PR并@作者给出错误原因和决绝方案
-  if (!errorReason) return
-  githubClient.pulls.update({
-    owner,
-    repo,
-    pull_number,
-    state: 'closed'
-  })
-  createComment(owner, repo, pull_number, `@${user}\n\n${errorReason}${message.suggest}`)
+  try {
+    checkMsgs(commitMsgs)
+  } catch ({ message: errorReason }) {
+    // 当出现错误时，关闭PR并@作者给出错误原因和决绝方案
+    if (!errorReason) return
+    githubClient.pulls.update({
+      owner,
+      repo,
+      pull_number,
+      state: 'closed'
+    })
+    createComment(owner, repo, pull_number, `@${user}\n\n${errorReason}${message.suggest}`)
+  }
 }
 
 module.exports = function (app) {
