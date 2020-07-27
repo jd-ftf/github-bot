@@ -1,18 +1,18 @@
 {
   "action": "assigned",
-  "number": 6,
+  "number": 19,
   "pull_request": {
-    "url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/6",
-    "id": 440673485,
-    "node_id": "MDExOlB1bGxSZXF1ZXN0NDQwNjczNDg1",
-    "html_url": "https://github.com/jd-ftf/vapp-demo/pull/6",
-    "diff_url": "https://github.com/jd-ftf/vapp-demo/pull/6.diff",
-    "patch_url": "https://github.com/jd-ftf/vapp-demo/pull/6.patch",
-    "issue_url": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/6",
-    "number": 6,
+    "url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/19",
+    "id": 442305009,
+    "node_id": "MDExOlB1bGxSZXF1ZXN0NDQyMzA1MDA5",
+    "html_url": "https://github.com/jd-ftf/vapp-demo/pull/19",
+    "diff_url": "https://github.com/jd-ftf/vapp-demo/pull/19.diff",
+    "patch_url": "https://github.com/jd-ftf/vapp-demo/pull/19.patch",
+    "issue_url": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/19",
+    "number": 19,
     "state": "open",
     "locked": false,
-    "title": "chore(deps-dev): bump lint-staged from 9.5.0 to 10.2.11",
+    "title": "chore(deps-dev): bump @babel/preset-env from 7.10.3 to 7.10.4",
     "user": {
       "login": "dependabot-preview[bot]",
       "id": 27856297,
@@ -33,32 +33,13 @@
       "type": "Bot",
       "site_admin": false
     },
-    "body": "Bumps [lint-staged](https://github.com/okonet/lint-staged) from 9.5.0 to 10.2.11.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/okonet/lint-staged/releases\">lint-staged's releases</a>.</em></p>\n<blockquote>\n<h2>v10.2.11</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.10...v10.2.11\">10.2.11</a> (2020-06-17)</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li>run all git commands with submodule.recurse=false (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/888\">#888</a>) (<a href=\"https://github.com/okonet/lint-staged/commit/86c9ed2bde1245a702635b42a57b92b809340b0e\">86c9ed2</a>)</li>\n</ul>\n<h2>v10.2.10</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.9...v10.2.10\">10.2.10</a> (2020-06-12)</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li>Git directory is not correctly resolved if GIT_WORK_TREE is set to relative path (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/887\">#887</a>) (<a href=\"https://github.com/okonet/lint-staged/commit/a1904ec6a96b04cd93eeb622b04cf328a10083df\">a1904ec</a>)</li>\n</ul>\n<h2>v10.2.9</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.8...v10.2.9\">10.2.9</a> (2020-06-04)</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li>update listr@2.1.0 and add enquirer peer dependency (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/883\">#883</a>) (<a href=\"https://github.com/okonet/lint-staged/commit/0daae611b0637ebc6b9fac8672b842444bee3a38\">0daae61</a>)</li>\n</ul>\n<h2>v10.2.8</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.7...v10.2.8\">10.2.8</a> (2020-06-03)</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li>canceling lint-staged via SIGINT restores state and cleans up (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/881\">#881</a>) (<a href=\"https://github.com/okonet/lint-staged/commit/b078324d5e911ec5e667736b2c552af32f475751\">b078324</a>)</li>\n</ul>\n<h2>v10.2.7</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.6...v10.2.7\">10.2.7</a> (2020-05-29)</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li>use machine output to avoid escaped and quoted filenames (<a href=\"https://github.com/okonet/lint-staged/commit/ea80a3dc4124ce8437d7879dea3c9220fb5b0ca2\">ea80a3d</a>)</li>\n</ul>\n<h2>v10.2.6</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.5...v10.2.6\">10.2.6</a> (2020-05-22)</h2>\n<h3>Bug Fixes</h3>\n<ul>\n<li>remove nanoid devDependency to remove ExperimentalWarning (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/874\">#874</a>) (<a href=\"https://github.com/okonet/lint-staged/commit/979da5d0d2fed4ef4a1748eaf10bb150005c99c4\">979da5d</a>)</li>\n</ul>\n<h2>v10.2.5</h2>\n<h2><a href=\"https://github.com/okonet/lint-staged/compare/v10.2.4...v10.2.5\">10.2.5</a> (2020-05-22)</h2>\n<!-- raw HTML omitted -->\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/86c9ed2bde1245a702635b42a57b92b809340b0e\"><code>86c9ed2</code></a> fix: run all git commands with submodule.recurse=false (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/888\">#888</a>)</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/a1904ec6a96b04cd93eeb622b04cf328a10083df\"><code>a1904ec</code></a> fix: Git directory is not correctly resolved if GIT_WORK_TREE is set to relat...</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/0daae611b0637ebc6b9fac8672b842444bee3a38\"><code>0daae61</code></a> fix: update listr@2.1.0 and add enquirer peer dependency (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/883\">#883</a>)</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/b078324d5e911ec5e667736b2c552af32f475751\"><code>b078324</code></a> fix: canceling lint-staged via SIGINT restores state and cleans up (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/881\">#881</a>)</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/21a2b411d43158d231b435ae476e379f07e550e1\"><code>21a2b41</code></a> Merge pull request <a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/876\">#876</a> from johnnywalker/allow-spaces-in-partially-staged</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/390d168ac29c0eff26bc66ffd417e714eaf7912c\"><code>390d168</code></a> test: add test for hiding unstaged changes in renamed file</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/ea80a3dc4124ce8437d7879dea3c9220fb5b0ca2\"><code>ea80a3d</code></a> fix: use machine output to avoid escaped and quoted filenames</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/979da5d0d2fed4ef4a1748eaf10bb150005c99c4\"><code>979da5d</code></a> fix: remove nanoid devDependency to remove ExperimentalWarning (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/874\">#874</a>)</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/b8e1a4a9683639d961f948283dec0e6dec556493\"><code>b8e1a4a</code></a> fix: truncate command title to stdout width (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/865\">#865</a>)</li>\n<li><a href=\"https://github.com/okonet/lint-staged/commit/93bc942d9640e152a65c15d42c707c9b63420684\"><code>93bc942</code></a> fix: node-13 deps issue with listr2 and uuid (<a href=\"https://github-redirect.dependabot.com/okonet/lint-staged/issues/868\">#868</a>)</li>\n<li>Additional commits viewable in <a href=\"https://github.com/okonet/lint-staged/compare/v9.5.0...v10.2.11\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=lint-staged&package-manager=npm_and_yarn&previous-version=9.5.0&new-version=10.2.11)](https://dependabot.com/compatibility-score/?dependency-name=lint-staged&package-manager=npm_and_yarn&previous-version=9.5.0&new-version=10.2.11)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n**Note:** This repo was added to Dependabot recently, so you'll receive a maximum of 5 PRs for your first few update runs. Once an update run creates fewer than 5 PRs we'll remove that limit.\n\nYou can always request more updates by clicking `Bump now` in your [Dependabot dashboard](https://app.dependabot.com).\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language\n- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language\n- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language\n- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language\n- `@dependabot badge me` will comment on this PR with code to add a \"Dependabot enabled\" badge to your readme\n\nAdditionally, you can set the following in your Dependabot [dashboard](https://app.dependabot.com):\n- Update frequency (including time of day and day of week)\n- Pull request limits (per update run and/or open at any time)\n- Out-of-range updates (receive only lockfile updates, if desired)\n- Security updates (receive only security updates, if desired)\n\n\n\n</details>",
-    "created_at": "2020-06-26T16:20:11Z",
-    "updated_at": "2020-06-26T16:27:37Z",
+    "body": "Bumps [@babel/preset-env](https://github.com/babel/babel/tree/HEAD/packages/babel-preset-env) from 7.10.3 to 7.10.4.\n<details>\n<summary>Release notes</summary>\n<p><em>Sourced from <a href=\"https://github.com/babel/babel/releases\">@babel/preset-env's releases</a>.</em></p>\n<blockquote>\n<h2>v7.10.4 (2020-06-30)</h2>\n<p>Thanks <a href=\"https://github.com/penguingovernor\">@penguingovernor</a>, <a href=\"https://github.com/sajadtorkamani\">@sajadtorkamani</a> and <a href=\"https://github.com/wojtekmaj\">@wojtekmaj</a> for their first PRs!</p>\n<h4>:eyeglasses: Spec Compliance</h4>\n<ul>\n<li><code>babel-helper-member-expression-to-functions</code>, <code>babel-plugin-proposal-class-properties</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11669\">#11669</a> Add <code>delete obj?.#x.a</code> support (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n<li><code>babel-parser</code>, <code>babel-types</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11652\">#11652</a> fix: implement early errors for record and tuple (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>:bug: Bug Fix</h4>\n<ul>\n<li><code>babel-types</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11752\">#11752</a> [regression] Don't validate file.comments in <code>@babel/types</code> (<a href=\"https://github.com/nicolo-ribaudo\">@nicolo-ribaudo</a>)</li>\n</ul>\n</li>\n<li><code>babel-plugin-proposal-do-expressions</code>, <code>babel-types</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11724\">#11724</a> fix: do-statementlist behavior (<a href=\"https://github.com/wlawt\">@wlawt</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>:nail_care: Polish</h4>\n<ul>\n<li><code>babel-parser</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11722\">#11722</a> Add better parser error when using jsx (<a href=\"https://github.com/penguingovernor\">@penguingovernor</a>)</li>\n</ul>\n</li>\n<li><code>babel-core</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11544\">#11544</a> Refine babel core types (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>:house: Internal</h4>\n<ul>\n<li><code>babel-core</code>, <code>babel-helper-fixtures</code>, <code>babel-standalone</code>, <code>babel-traverse</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11758\">#11758</a> Replace non-inclusive &quot;whitelist&quot; and &quot;blacklist&quot; terms with &quot;allowlist&quot; etc. (<a href=\"https://github.com/wojtekmaj\">@wojtekmaj</a>)</li>\n</ul>\n</li>\n<li><code>babel-parser</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11376\">#11376</a> Add @babel/eslint-plugin-development-internal (<a href=\"https://github.com/kaicataldo\">@kaicataldo</a>)</li>\n</ul>\n</li>\n<li><code>babel-core</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11544\">#11544</a> Refine babel core types (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>Committers: 7</h4>\n<ul>\n<li>Huáng Jùnliàng (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n<li>Jorge Henriquez (<a href=\"https://github.com/penguingovernor\">@penguingovernor</a>)</li>\n<li>Kai Cataldo (<a href=\"https://github.com/kaicataldo\">@kaicataldo</a>)</li>\n<li>Nicolò Ribaudo (<a href=\"https://github.com/nicolo-ribaudo\">@nicolo-ribaudo</a>)</li>\n<li>Simon Kotwicz (<a href=\"https://github.com/simonkotwicz\">@simonkotwicz</a>)</li>\n<li>William Law (<a href=\"https://github.com/wlawt\">@wlawt</a>)</li>\n<li>Wojciech Maj (<a href=\"https://github.com/wojtekmaj\">@wojtekmaj</a>)</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Changelog</summary>\n<p><em>Sourced from <a href=\"https://github.com/babel/babel/blob/main/CHANGELOG.md\">@babel/preset-env's changelog</a>.</em></p>\n<blockquote>\n<h2>v7.10.4 (2020-06-30)</h2>\n<h4>:eyeglasses: Spec Compliance</h4>\n<ul>\n<li><code>babel-helper-member-expression-to-functions</code>, <code>babel-plugin-proposal-class-properties</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11669\">#11669</a> Add <code>delete obj?.#x.a</code> support (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n<li><code>babel-parser</code>, <code>babel-types</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11652\">#11652</a> fix: implement early errors for record and tuple (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>:bug: Bug Fix</h4>\n<ul>\n<li><code>babel-types</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11752\">#11752</a> [regression] Don't validate file.comments in <code>@babel/types</code> (<a href=\"https://github.com/nicolo-ribaudo\">@nicolo-ribaudo</a>)</li>\n</ul>\n</li>\n<li><code>babel-plugin-proposal-do-expressions</code>, <code>babel-types</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11724\">#11724</a> fix: do-statementlist behavior (<a href=\"https://github.com/wlawt\">@wlawt</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>:nail_care: Polish</h4>\n<ul>\n<li><code>babel-parser</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11722\">#11722</a> Add better parser error when using jsx (<a href=\"https://github.com/penguingovernor\">@penguingovernor</a>)</li>\n</ul>\n</li>\n<li><code>babel-core</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11544\">#11544</a> Refine babel core types (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n</ul>\n<h4>:house: Internal</h4>\n<ul>\n<li><code>babel-core</code>, <code>babel-helper-fixtures</code>, <code>babel-standalone</code>, <code>babel-traverse</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11758\">#11758</a> Replace non-inclusive &quot;whitelist&quot; and &quot;blacklist&quot; terms with &quot;allowlist&quot; etc. (<a href=\"https://github.com/wojtekmaj\">@wojtekmaj</a>)</li>\n</ul>\n</li>\n<li><code>babel-parser</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11376\">#11376</a> Add @babel/eslint-plugin-development-internal (<a href=\"https://github.com/kaicataldo\">@kaicataldo</a>)</li>\n</ul>\n</li>\n<li><code>babel-core</code>\n<ul>\n<li><a href=\"https://github-redirect.dependabot.com/babel/babel/pull/11544\">#11544</a> Refine babel core types (<a href=\"https://github.com/JLHwung\">@JLHwung</a>)</li>\n</ul>\n</li>\n</ul>\n</blockquote>\n</details>\n<details>\n<summary>Commits</summary>\n<ul>\n<li><a href=\"https://github.com/babel/babel/commit/7fd40d86a0d03ff0e9c3ea16b29689945433d4df\"><code>7fd40d8</code></a> v7.10.4</li>\n<li>See full diff in <a href=\"https://github.com/babel/babel/commits/v7.10.4/packages/babel-preset-env\">compare view</a></li>\n</ul>\n</details>\n<br />\n\n\n[![Dependabot compatibility score](https://api.dependabot.com/badges/compatibility_score?dependency-name=@babel/preset-env&package-manager=npm_and_yarn&previous-version=7.10.3&new-version=7.10.4)](https://dependabot.com/compatibility-score/?dependency-name=@babel/preset-env&package-manager=npm_and_yarn&previous-version=7.10.3&new-version=7.10.4)\n\nDependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.\n\n[//]: # (dependabot-automerge-start)\n[//]: # (dependabot-automerge-end)\n\n---\n\n<details>\n<summary>Dependabot commands and options</summary>\n<br />\n\nYou can trigger Dependabot actions by commenting on this PR:\n- `@dependabot rebase` will rebase this PR\n- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it\n- `@dependabot merge` will merge this PR after your CI passes on it\n- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it\n- `@dependabot cancel merge` will cancel a previously requested merge and block automerging\n- `@dependabot reopen` will reopen this PR if it is closed\n- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually\n- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)\n- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language\n- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language\n- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language\n- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language\n- `@dependabot badge me` will comment on this PR with code to add a \"Dependabot enabled\" badge to your readme\n\nAdditionally, you can set the following in your Dependabot [dashboard](https://app.dependabot.com):\n- Update frequency (including time of day and day of week)\n- Pull request limits (per update run and/or open at any time)\n- Out-of-range updates (receive only lockfile updates, if desired)\n- Security updates (receive only security updates, if desired)\n\n\n\n</details>",
+    "created_at": "2020-06-30T21:26:16Z",
+    "updated_at": "2020-06-30T21:26:29Z",
     "closed_at": null,
     "merged_at": null,
-    "merge_commit_sha": "f92c319230a0f65e40f8765a8728d8eba82d5abd",
-    "assignee": {
-      "login": "ftf-bot",
-      "id": 59186673,
-      "node_id": "MDQ6VXNlcjU5MTg2Njcz",
-      "avatar_url": "https://avatars2.githubusercontent.com/u/59186673?v=4",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/ftf-bot",
-      "html_url": "https://github.com/ftf-bot",
-      "followers_url": "https://api.github.com/users/ftf-bot/followers",
-      "following_url": "https://api.github.com/users/ftf-bot/following{/other_user}",
-      "gists_url": "https://api.github.com/users/ftf-bot/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/ftf-bot/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/ftf-bot/subscriptions",
-      "organizations_url": "https://api.github.com/users/ftf-bot/orgs",
-      "repos_url": "https://api.github.com/users/ftf-bot/repos",
-      "events_url": "https://api.github.com/users/ftf-bot/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/ftf-bot/received_events",
-      "type": "User",
-      "site_admin": false
-    },
+    "merge_commit_sha": "949af2af6be1a35b9b102cf69366c98d7cf4e385",
+    "assignee": null,
     "assignees": [
       {
         "login": "ftf-bot",
@@ -96,19 +77,28 @@
         "color": "0366d6",
         "default": false,
         "description": "Pull requests that update a dependency file"
+      },
+      {
+        "id": 2163824370,
+        "node_id": "MDU6TGFiZWwyMTYzODI0Mzcw",
+        "url": "https://api.github.com/repos/jd-ftf/vapp-demo/labels/package",
+        "name": "package",
+        "color": "ededed",
+        "default": false,
+        "description": null
       }
     ],
     "milestone": null,
     "draft": false,
-    "commits_url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/6/commits",
-    "review_comments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/6/comments",
+    "commits_url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/19/commits",
+    "review_comments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/19/comments",
     "review_comment_url": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/comments{/number}",
-    "comments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/6/comments",
-    "statuses_url": "https://api.github.com/repos/jd-ftf/vapp-demo/statuses/086971e84aadb6929380c79d5ee43ec8d9886c5b",
+    "comments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/19/comments",
+    "statuses_url": "https://api.github.com/repos/jd-ftf/vapp-demo/statuses/fe0601844b4a6e44f915ffa2bb0a1dcf1f0975ca",
     "head": {
-      "label": "jd-ftf:dependabot/npm_and_yarn/lint-staged-10.2.11",
-      "ref": "dependabot/npm_and_yarn/lint-staged-10.2.11",
-      "sha": "086971e84aadb6929380c79d5ee43ec8d9886c5b",
+      "label": "jd-ftf:dependabot/npm_and_yarn/babel/preset-env-7.10.4",
+      "ref": "dependabot/npm_and_yarn/babel/preset-env-7.10.4",
+      "sha": "fe0601844b4a6e44f915ffa2bb0a1dcf1f0975ca",
       "user": {
         "login": "jd-ftf",
         "id": 58334248,
@@ -196,14 +186,14 @@
         "releases_url": "https://api.github.com/repos/jd-ftf/vapp-demo/releases{/id}",
         "deployments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/deployments",
         "created_at": "2020-03-31T01:18:58Z",
-        "updated_at": "2020-04-13T01:34:53Z",
-        "pushed_at": "2020-06-26T16:22:56Z",
+        "updated_at": "2020-06-30T09:29:31Z",
+        "pushed_at": "2020-07-23T21:20:42Z",
         "git_url": "git://github.com/jd-ftf/vapp-demo.git",
         "ssh_url": "git@github.com:jd-ftf/vapp-demo.git",
         "clone_url": "https://github.com/jd-ftf/vapp-demo.git",
         "svn_url": "https://github.com/jd-ftf/vapp-demo",
         "homepage": null,
-        "size": 274,
+        "size": 1053,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "JavaScript",
@@ -216,18 +206,22 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 9,
+        "open_issues_count": 8,
         "license": null,
         "forks": 0,
-        "open_issues": 9,
+        "open_issues": 8,
         "watchers": 0,
-        "default_branch": "master"
+        "default_branch": "master",
+        "allow_squash_merge": true,
+        "allow_merge_commit": true,
+        "allow_rebase_merge": true,
+        "delete_branch_on_merge": false
       }
     },
     "base": {
       "label": "jd-ftf:master",
       "ref": "master",
-      "sha": "852ea53f19f1dc653d778042d7d491972d1f17d4",
+      "sha": "43d68beb89bceb10f3475db6bfda8a986db9ffb9",
       "user": {
         "login": "jd-ftf",
         "id": 58334248,
@@ -315,14 +309,14 @@
         "releases_url": "https://api.github.com/repos/jd-ftf/vapp-demo/releases{/id}",
         "deployments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/deployments",
         "created_at": "2020-03-31T01:18:58Z",
-        "updated_at": "2020-04-13T01:34:53Z",
-        "pushed_at": "2020-06-26T16:22:56Z",
+        "updated_at": "2020-06-30T09:29:31Z",
+        "pushed_at": "2020-07-23T21:20:42Z",
         "git_url": "git://github.com/jd-ftf/vapp-demo.git",
         "ssh_url": "git@github.com:jd-ftf/vapp-demo.git",
         "clone_url": "https://github.com/jd-ftf/vapp-demo.git",
         "svn_url": "https://github.com/jd-ftf/vapp-demo",
         "homepage": null,
-        "size": 274,
+        "size": 1053,
         "stargazers_count": 0,
         "watchers_count": 0,
         "language": "JavaScript",
@@ -335,41 +329,45 @@
         "mirror_url": null,
         "archived": false,
         "disabled": false,
-        "open_issues_count": 9,
+        "open_issues_count": 8,
         "license": null,
         "forks": 0,
-        "open_issues": 9,
+        "open_issues": 8,
         "watchers": 0,
-        "default_branch": "master"
+        "default_branch": "master",
+        "allow_squash_merge": true,
+        "allow_merge_commit": true,
+        "allow_rebase_merge": true,
+        "delete_branch_on_merge": false
       }
     },
     "_links": {
       "self": {
-        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/6"
+        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/19"
       },
       "html": {
-        "href": "https://github.com/jd-ftf/vapp-demo/pull/6"
+        "href": "https://github.com/jd-ftf/vapp-demo/pull/19"
       },
       "issue": {
-        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/6"
+        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/19"
       },
       "comments": {
-        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/6/comments"
+        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/issues/19/comments"
       },
       "review_comments": {
-        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/6/comments"
+        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/19/comments"
       },
       "review_comment": {
         "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/comments{/number}"
       },
       "commits": {
-        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/6/commits"
+        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/pulls/19/commits"
       },
       "statuses": {
-        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/statuses/086971e84aadb6929380c79d5ee43ec8d9886c5b"
+        "href": "https://api.github.com/repos/jd-ftf/vapp-demo/statuses/fe0601844b4a6e44f915ffa2bb0a1dcf1f0975ca"
       }
     },
-    "author_association": "NONE",
+    "author_association": "CONTRIBUTOR",
     "active_lock_reason": null,
     "merged": false,
     "mergeable": true,
@@ -380,8 +378,8 @@
     "review_comments": 0,
     "maintainer_can_modify": false,
     "commits": 1,
-    "additions": 378,
-    "deletions": 286,
+    "additions": 457,
+    "deletions": 554,
     "changed_files": 2
   },
   "assignee": {
@@ -471,14 +469,14 @@
     "releases_url": "https://api.github.com/repos/jd-ftf/vapp-demo/releases{/id}",
     "deployments_url": "https://api.github.com/repos/jd-ftf/vapp-demo/deployments",
     "created_at": "2020-03-31T01:18:58Z",
-    "updated_at": "2020-04-13T01:34:53Z",
-    "pushed_at": "2020-06-26T16:22:56Z",
+    "updated_at": "2020-06-30T09:29:31Z",
+    "pushed_at": "2020-07-23T21:20:42Z",
     "git_url": "git://github.com/jd-ftf/vapp-demo.git",
     "ssh_url": "git@github.com:jd-ftf/vapp-demo.git",
     "clone_url": "https://github.com/jd-ftf/vapp-demo.git",
     "svn_url": "https://github.com/jd-ftf/vapp-demo",
     "homepage": null,
-    "size": 274,
+    "size": 1053,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "JavaScript",
@@ -491,10 +489,10 @@
     "mirror_url": null,
     "archived": false,
     "disabled": false,
-    "open_issues_count": 9,
+    "open_issues_count": 8,
     "license": null,
     "forks": 0,
-    "open_issues": 9,
+    "open_issues": 8,
     "watchers": 0,
     "default_branch": "master"
   },
