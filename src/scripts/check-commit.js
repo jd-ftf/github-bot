@@ -52,6 +52,14 @@ async function listAllCommit (owner, repo, pull_number) {
  */
 function checkMsgs (msgs) {
   msgs = msgs.filter(msg => !ignoreMsg.some(re => re.test(msg)))
+  // 剔除换行之后的内容
+  msgs = msgs.map(commit => {
+    const hasEntryReturn = commit.indexOf('\n')
+    if (hasEntryReturn !== -1) {
+      return commit.substring(0, hasEntryReturn)
+    }
+    return commit
+  })
   msgs.reduce((prev, current) => {
     // 有两个相邻的 commit message 内容完全相同
     if (prev.trim() === current.trim()) {
